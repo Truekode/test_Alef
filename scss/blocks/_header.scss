@@ -1,0 +1,103 @@
+.header {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+
+  &__wrp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
+  }
+
+  &__links {
+    display: flex;
+    grid-column-gap: 34px;
+  }
+
+  &__link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__links-profile {
+    background-image: url("../img/person.svg");
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__links-favorite {
+    background-image: url("../img/favorite.svg");
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__links-card {
+    background-image: url("../img/cart.svg");
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__links-burger {
+    display: none;
+    background-image: url("../img/menu.svg");
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    background: white;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    flex-direction: column;
+    padding: 25px 30px 43px 30px;
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+
+  &__mobile-link {
+    padding: 0px;
+    font-family: Open Sans;
+    font-style: normal;
+    border: none;
+    background: none;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+  }
+
+  &__mobile-close {
+    position: absolute;
+    right: 30px;
+    width: 14px;
+    height: 14px;
+    background: none;
+    background-image: url("../img/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+  }
+}
