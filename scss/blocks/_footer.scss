@@ -128,4 +128,8 @@
     text-decoration: none;
     margin-top: 16px;
   }
+
+  &__input:focus-visible {
+    outline: none;
+  }
 }

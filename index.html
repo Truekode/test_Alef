@@ -17,7 +17,7 @@
                 <a href="#" class="header__link header__links-profile"></a>
                 <a href="#" class="header__link header__links-favorite"></a>
                 <a href="#" class="header__link header__links-card"></a>
-                <button type="button" class="header__link header__links-burger"></button>
+                <button type="button" class="header__link header__links-burger" id="burgerBtn"></button>
             </div>
         </section>
         <nav class="header__mobile">
@@ -32,7 +32,7 @@
         <section class="product container">
             <h2 class="visually-hidden">Product</h2>
             <div class="product__box">
-                <img src="./img/product.jpg" alt="product" class="product__box-img">
+                <img src="./img/product.jpg" alt="product" class="product__box-img" id="boxImg">
                 <div class="product__box-grid">
                     <button class="product-box__btn product-box__btn-active" type="button"></button>
                     <button class="product-box__btn" type="button"></button>
@@ -71,9 +71,9 @@
                 </select>
                 <a href="#" class="product__info-help">Определить размер</a>
                 <div class="product__info-buy">
-                    <button class="product__info-plus" type="button">+</button>
-                    <button class="product__info-cont" type="button">1</button>
-                    <button class="product__info-minus" type="button">-</button>
+                    <button class="product__info-plus" type="button" id="productPlus">+</button>
+                    <input type="number" class="product__info-cont" value="1" id="productCont"></input>
+                    <button class="product__info-minus" type="button" id="productMinus">-</button>
                     <button class="product__info-btn" type="button">Добавить в корзину</button>
                     <button class="product__info-favorite" type="button"></button>
                 </div>
@@ -89,22 +89,51 @@
             <a href="#" class="styles__link">Посмотреть все стили</a>
             <div class="box">
                 <div class="styles__box box-1">
+                    <div class="overlay"></div>
+                    <button class="box__overlay-copy"></button>
+                    <button class="box__overlay-cart"></button>
+                    <button class="box__overlay-favorite">200</button>
+                    <p class="box__overlay-txt">Узнай, что на мне</p>
                     <img loading="lazy" src="./img/box-1.png" alt="products-1" class="box__img-main">
                 </div>
                 <div class="styles__box box-2">
+                    <div class="overlay"></div>
+                    <button class="box__overlay-copy"></button>
+                    <button class="box__overlay-cart"></button>
+                    <button class="box__overlay-favorite">200</button>
+                    <p class="box__overlay-txt">Узнай, что на мне</p>
                     <img loading="lazy" src="./img/box-2.png" alt="products-1" class="box__img">
                 </div>
                 <div class="styles__box box-3">
+                    <div class="overlay"></div>
+                    <button class="box__overlay-copy"></button>
+                    <button class="box__overlay-cart"></button>
+                    <button class="box__overlay-favorite">200</button>
+                    <p class="box__overlay-txt">Узнай, что на мне</p>
                     <img loading="lazy" src="./img/box-3.png" alt="products-1" class="box__img">
                 </div>
                 <div class="styles__box box-4">
+                    <div class="overlay"></div>
+                    <button class="box__overlay-copy"></button>
+                    <button class="box__overlay-cart"></button>
+                    <button class="box__overlay-favorite">200</button>
+                    <p class="box__overlay-txt">Узнай, что на мне</p>
                     <img loading="lazy" src="./img/box-4.png" alt="products-1" class="box__img">
                 </div>
                 <div class="styles__box box-5">
+                    <div class="overlay"></div>
+                    <button class="box__overlay-copy"></button>
+                    <button class="box__overlay-cart"></button>
+                    <button class="box__overlay-favorite">200</button>
+                    <p class="box__overlay-txt">Узнай, что на мне</p>
                     <img loading="lazy" src="./img/box-5.png" alt="products-1" class="box__img">
                 </div>
             </div>
         </section>
+        <div class="modal">
+            <div class="modal__overlay"></div>
+            <p class="modal__text"></p>
+        </div>
     </main>
     <footer class="footer container">
         <nav class="footer__nav footer__links">
@@ -123,13 +152,14 @@
             <fielset class="footer__fieldset">
                 <legend class="footer__legend">Узнайте первыми о новинках и акциях</legend>
                 <div class="footer__wrp">
-                    <label class="visually-hidden" for="email-input">email</label>
-                    <input type="email" class="footer__input" id="email-input" placeholder="Адрес электронной почты">
+                    <label class="visually-hidden" for="emailInput">email</label>
+                    <input type="email" class="footer__input" id="emailInput" placeholder="Адрес электронной почты">
                     <button type="button" class="footer__close"></button>
                 </div>
             </fielset>
             <button type="submit" class="footer__btn">Подписаться</button>
         </form>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>

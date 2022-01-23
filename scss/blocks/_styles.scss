@@ -9,4 +9,18 @@
     letter-spacing: 0.04em;
     color: #333333;
   }
+
+  &__box {
+    position: relative;
+  }
+
+
+  &__box:hover .box__overlay-copy,
+  &__box:hover .box__overlay-cart,
+  &__box:hover .box__overlay-favorite,
+  &__box:hover .box__overlay-txt,
+  &__box:hover .overlay{
+    display: block;
+  }
+
 }

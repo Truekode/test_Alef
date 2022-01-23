@@ -1,10 +1,16 @@
 .header {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: white;
   position: fixed;
   z-index: 10;
   width: 100%;
+  opacity: 1;
+  transition: opacity .3s linear;
 
+  &.hide {
+    opacity: 0;
+    transition: opacity .3s linear;
+  }
   &__wrp {
     display: flex;
     align-items: center;
@@ -61,7 +67,10 @@
   }
 
   &__mobile {
-    display: none;
+    transition: .2s visibility linear, .2s opacity linear;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
     background: white;
     z-index: 10;
     position: absolute;
@@ -99,5 +108,11 @@
     background-repeat: no-repeat;
     border: none;
     background-position: center;
+  }
+
+  &__mobile-open {
+    transition: .2s visibility linear, .2s opacity linear;
+    visibility: visible;
+    opacity: 1;
   }
 }
